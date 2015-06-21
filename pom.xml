@@ -97,11 +97,11 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>net.parallaxmc.laxio.LaxioStart</Main-Class>
-                            <Implementation-Title>Laxio</Implementation-Title>
+                            <Main-Class>me.hfox.craftbot.CraftStart</Main-Class>
+                            <Implementation-Title>CraftBot</Implementation-Title>
                             <Implementation-Version>${project.version}</Implementation-Version>
                             <Implementation-Vendor>Parallax Development Team</Implementation-Vendor>
-                            <Specification-Title>Laxio</Specification-Title>
+                            <Specification-Title>CraftBot</Specification-Title>
                             <Specification-Version>${minecraft.version}</Specification-Version>
                             <Specification-Vendor>Parallax Development Team</Specification-Vendor>
                         </manifestEntries>
@@ -122,6 +122,16 @@
                             <artifactSet>
                                 <excludes/>
                             </artifactSet>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
                         </configuration>
                     </execution>
                 </executions>
